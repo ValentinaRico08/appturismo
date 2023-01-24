@@ -39,6 +39,7 @@ public class Splash extends AppCompatActivity {
                 //Lanzar una nueva actividad
                 Intent intent = new Intent(Splash.this,MainActivity.class); //Al lugar donde quiero ir
                 startActivity(intent);
+                cancion.pause();
             }
         };
 
