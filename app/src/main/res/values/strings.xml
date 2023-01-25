@@ -4,5 +4,13 @@
     <string name="opcion1">Acerca de</string>
     <string name="opcion2">Ingles</string>
     <string name="opcion3">Español</string>
-
+    <string name="texthotel">Hotel</string>
+    <string name="textrestaurante">Restaurante</string>
+    <string name="nombre">Nombre.</string>
+    <string name="nombrecompleto">Valentina Taborda Rico</string>
+    <string name="descripcion">Descripción.</string>
+    <string name="descripcioncompleta">Técnica en Desarrollo de Software</string>
+    <string name="ciudad">Medellín-Colombia</string>
+    <string name="correo">Correo Electrónico</string>
+    <string name="correoe">valentina18tabordarico@gmail.com</string>
 </resources>
