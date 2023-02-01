@@ -10,6 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import java.util.Locale;
@@ -17,6 +19,8 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity {
 
     //Atributos
+    ImageButton botonHoteles;
+    ImageButton botonRestaurantes;
 
     @Override   //Metodos
     protected void onCreate(Bundle savedInstanceState) { //void no retorna nada
@@ -28,6 +32,26 @@ public class MainActivity extends AppCompatActivity {
         //Cambiando el color del ActionBar
         ColorDrawable colorBarra= new ColorDrawable(Color.parseColor("#1EA988"));
         barra.setBackgroundDrawable(colorBarra);
+
+        //Asociando los botones a eventos de clic (escuchar clic)
+        botonHoteles = findViewById(R.id.iconohotel); //se referencia con el id del hotel en xml
+        botonRestaurantes= findViewById(R.id.iconorestaurante);
+
+        botonHoteles.setOnClickListener(new View.OnClickListener() { //setOnClickListener es un metodo y View.OnClickListener es un evento
+            @Override
+            public void onClick(View v) {
+                Intent intentHoteles = new Intent(MainActivity.this,Hoteles.class);
+                startActivity(intentHoteles);
+            }
+        });
+
+        botonRestaurantes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentRestaurantes = new Intent(MainActivity.this,Restaurantes.class);
+                startActivity(intentRestaurantes);
+            }
+        });
     }
 
     //Metodo para cambiar el idioma de mi app
